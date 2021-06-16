@@ -42,7 +42,7 @@ body {
   top: 50%;
 }
 
-.hour-hand {
+.hours {
   height: 50%;
   width: 0px;
   box-sizing: border-box;
@@ -51,10 +51,10 @@ body {
   left: 50%;
   position: absolute;
   transform-origin: bottom;
-  animation: secondsMotion 43200s infinite steps(60);
+  /* animation: secondsMotion 43200s infinite steps(12); */
 }
 
-.min-hand {
+.mins {
   height: 50%;
   width: 0px;
   box-sizing: border-box;
@@ -63,10 +63,10 @@ body {
   left: 50%;
   position: absolute;
   transform-origin: bottom;
-  animation: secondsMotion 3600s infinite steps(60);
+  /* animation: secondsMotion 3600s infinite steps(60); */
 }
 
-.second-hand {
+.seconds {
   height: 50%;
   width: 0px;
   box-sizing: border-box;
@@ -75,10 +75,10 @@ body {
   left: 50%;
   position: absolute;
   transform-origin: bottom;
-  animation: secondsMotion 60s infinite steps(60);
+  /* animation: rotate 60s infinite steps(60); */
 }
 
-@keyframes secondsMotion {
+/* @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -86,4 +86,4 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
