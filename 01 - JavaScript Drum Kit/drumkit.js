@@ -29,9 +29,9 @@
 
 //////WORKING WITH CLICK
 
-document.querySelectorAll(".key").forEach(function (ele) {
-  ele.addEventListener("click", function (e) {
-    var dataKey = this.dataset.key;
-    document.querySelector("audio[data-key='" + dataKey + "']").play();
-  });
-});
+// document.querySelectorAll(".key").forEach(function (ele) {
+//   ele.addEventListener("click", function (e) {
+//     var dataKey = this.dataset.key;
+//     document.querySelector("audio[data-key='" + dataKey + "']").play();
+//   });
+// });
