@@ -24,13 +24,13 @@ body {
   text-align: justify;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
   transform: scale(0.98);
-  transition: transform 0.5s;
+  transition: transform 1s;
 }
 
 header {
   text-align: center;
   height: 50vh;
-  background: url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
+  /* background: url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat; */
   background-size: cover;
   display: flex;
   align-items: center;
@@ -76,9 +76,9 @@ li.logo {
   font-size: 30px;
 }
 
-.logo-active {
-  transform: translateX(500px);
-}
+/* li.logo-active {
+  max-width: 100;
+} */
 
 li.logo a {
   color: black;
