@@ -1,25 +1,30 @@
 const hero = document.querySelector(".hero");
 const text = hero.querySelector("h1");
-const walk = 400;
+const move = 400;
 
-function shadow(e) {
+function effect(e) {
+  ////////////////////////////////convert size of hero div to variable///////////////////////////////
+
   const width = hero.offsetWidth;
   const height = hero.offsetHeight;
-  let { offsetX: x, offsetY: y } = e;
 
-  if (this !== e.target) {
-    x = x + e.target.offsetLeft;
-    y = y + e.target.offsetTop;
-  }
-  const xWalk = (x / width) * walk - walk / 2;
-  const yWalk = (y / height) * walk - walk / 2;
+  //////////////////////////get coordinates of window////////////////////////////////////////////////////
+
+  let { clientX: x, clientY: y } = e;
+
+  const xMove = (x / width) * move - move / 2;
+  const yMove = (y / height) * move - move / 2;
+
+  ////////////////////////////////////////////////adds 4 text shadow elements/////////////////////////////////////////////
 
   text.style.textShadow = `
-  ${xWalk}px ${yWalk}px 0 rgba(255, 0, 255, 0.7),
-  ${xWalk * -1}px ${yWalk}px 0 rgba(0, 255, 255, 0.7),
-  ${yWalk}px ${xWalk * -1}px 0 rgba(0, 255, 0, 0.7),
-  ${yWalk * -1}px ${xWalk}px 0 rgba(0, 0, 255, 0.7)
+  ${xMove}px ${yMove}px 2px blue,
+  ${xMove * -1}px ${yMove}px 2px red,
+  ${yMove}px ${xMove * -1}px 2px yellow,
+  ${yMove * -1}px ${xMove}px 2px green
   `;
 }
 
-hero.addEventListener("mousemove", shadow);
+/////////////////////////////////////////////////////listen for mouse move, call function///////////////////////////////////////
+
+hero.addEventListener("mousemove", effect);
