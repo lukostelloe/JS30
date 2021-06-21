@@ -354,3 +354,19 @@ var cornami = {
 };
 
 cornami.load();
+
+//////////////////////MYCODE///////////////////////////////////
+
+let input = [];
+const passWord = "unicorns";
+
+window.addEventListener("keyup", (e) => {
+  console.log(e.key);
+  input.push(e.key);
+  input.splice(-passWord.length - 1, input.length - passWord.length);
+  console.log(input);
+  if (input.join("").includes(passWord)) {
+    console.log("Password Correct!");
+    cornify_add();
+  }
+});
