@@ -14,6 +14,8 @@ const bands = [
   "An Old Dog",
 ];
 
+//////////////////////////////////////////////////REMOVING THE, AN, A////////////////////////////////////////////////
+
 function showArray() {
   for (var i = 0, len = bands.length; i < len; i++) {
     bands[i] = bands[i].replace("An ", "");
@@ -21,12 +23,13 @@ function showArray() {
     bands[i] = bands[i].replace("The ", "");
   }
 }
+/////////////////////////////////////////////////////SORT THE NEW ARRAY//////////////////////////////////////////
 function sortThem() {
   bands.sort();
   document.getElementById("bands").innerHTML =
     "<li>" + bands.join("</li><li>") + "</li>";
 }
-
+///////////////////////////////////////////////REPLACING THE ELEMENTS (NOT IDEAL BUT WORKAROUND)////////////////////////////
 function replaceThem() {
   for (var i = 0, len = bands.length; i < len; i++) {
     bands[i] = bands[i].replace("Bled", "The Bled");
