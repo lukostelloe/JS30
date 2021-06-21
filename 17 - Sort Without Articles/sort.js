@@ -23,13 +23,8 @@ function showArray() {
     bands[i] = bands[i].replace("The ", "");
   }
 }
-/////////////////////////////////////////////////////SORT THE NEW ARRAY//////////////////////////////////////////
-function sortThem() {
-  bands.sort();
-  document.getElementById("bands").innerHTML =
-    "<li>" + bands.join("</li><li>") + "</li>";
-}
-///////////////////////////////////////////////REPLACING THE ELEMENTS (NOT IDEAL BUT WORKAROUND)////////////////////////////
+
+///////////////////////////////////////////////REPLACING THE ELEMENTS (NOT IDEAL BUT WORKAROUND)//////////
 function replaceThem() {
   for (var i = 0, len = bands.length; i < len; i++) {
     bands[i] = bands[i].replace("Bled", "The Bled");
@@ -42,6 +37,31 @@ function replaceThem() {
   document.getElementById("bands").innerHTML =
     "<li>" + bands.join("</li><li>") + "</li>";
 }
+
 showArray();
-sortThem();
+bands.sort();
 replaceThem();
+
+//if the first word is A, AN or THE, remove that spot.....order the array disregarding the words//
+//slice if it contains//
+//use join method to transform the array again//
+//split turns sentence to array with seperator//
+//" "//
+//join//
+
+// bands.join();
+// bands.replace();
+// bands.sort();
+
+// to turn a sentence into an array//
+
+// split, splice[1]
+// Array.splice[0,1];
+
+// ["hello","hi"]
+
+// ["hello", "well hi"]
+
+// array[1]="well hi"
+
+console.log("Anywhere But Here".indexOf("yes"));
